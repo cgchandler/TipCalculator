@@ -29,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
         // Limit data entry to 5 digits before and 2 digits after decimal
         EditText editBillAmount = findViewById(R.id.editTextBillAmount);
         editBillAmount.setFilters(new InputFilter[]{new DecimalDigitsInputFilter(5, 2)});
+
+        // Clear the initial text for the calculation results
+        TextView textTotalDue = findViewById(R.id.textTotalDue);
+        textTotalDue.setText("");
     }
 
     private void initButtonTip15() {
@@ -67,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     private void calculateAndDisplayTip(Double tipPercent) {
         // Get the customer's bill amount (default to zero if an empty string)
         EditText editBillAmount = findViewById(R.id.editTextBillAmount);
-        Double billAmount = Double.parseDouble(editBillAmount.getText().toString().isEmpty() ? "0": editBillAmount.getText().toString());
+        Double billAmount = editBillAmount.getText().toString().isEmpty() ? 0: Double.parseDouble(editBillAmount.getText().toString());
 
         // Calculate the tip and total amounts
         TextView textTotalDue = findViewById(R.id.textTotalDue);

@@ -13,33 +13,35 @@
         android:ems="10"
         android:hint="Enter Bill Amount"
         android:inputType="numberDecimal"
+        android:textSize="@dimen/prompt_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintVertical_bias="0.209" />
 
     <Button
         android:id="@+id/buttonTip15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="15%"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.213"
+        android:textSize="@dimen/button_text_size"
+        app:layout_constraintEnd_toStartOf="@+id/buttonTip18"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBillAmount" />
+        app:layout_constraintTop_toTopOf="@+id/buttonTip18" />
 
     <Button
         android:id="@+id/buttonTip18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
         android:text="18%"
+        android:textSize="@dimen/button_text_size"
         app:layout_constraintEnd_toStartOf="@+id/buttonTip20"
-        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/buttonTip15"
         app:layout_constraintTop_toBottomOf="@+id/editTextBillAmount" />
 
@@ -47,18 +49,20 @@
         android:id="@+id/buttonTip20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="28dp"
         android:text="20%"
+        android:textSize="@dimen/button_text_size"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextBillAmount" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonTip18"
+        app:layout_constraintTop_toTopOf="@+id/buttonTip18" />
 
     <TextView
         android:id="@+id/textTotalDue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
         android:layout_marginTop="20dp"
+        android:text="Display Results Here!"
+        android:textSize="@dimen/message_text_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
